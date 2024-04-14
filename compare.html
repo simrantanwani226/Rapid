@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>The Career valley</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style3.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Rapid
+  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <title>College Comparison</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .card-body {
+      min-height: 200px; /* Adjust this value as needed */
+    }
+
+    /* College Comparison Form */
+    #collegeComparison {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .college-select {
+      margin-bottom: 10px;
+    }
+
+    .compare-button {
+      display: block;
+      margin: 0 auto;
+      background-color: #28a745; /* Green color */
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .compare-button:hover {
+      background-color: #218838; /* Darker shade of green on hover */
+    }
+  </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+        <div class="container d-flex align-items-center">
+          <h1 class="logo me-auto"><img src="assets/img/cvlogo.png"> </h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+              <li><a class="nav-link scrollto" href="#about">About</a></li>
+              <li><a class="nav-link scrollto" href="#services">Services</a></li>
+              <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+        </div>
+      </header><!-- End Header -->
+    
+
+  
+  <div class="container">
+
+  <!-- College Comparison Section -->
+  <div id="collegeComparison" class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <form id="compareForm">
+          <div class="mb-3">
+            <label for="college1" class="form-label">Select College 1:</label>
+            <select class="form-select college-select" id="college1">
+              <option selected>Select College 1</option>
+              <!-- Add options dynamically -->
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="college2" class="form-label">Select College 2:</label>
+            <select class="form-select college-select" id="college2">
+              <option selected>Select College 2</option>
+              <!-- Add options dynamically -->
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary compare-button">Compare</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="comparisonResult" class="container" style="display: none;">
+    <h2>Comparison Result</h2>
+    <table id="comparisonTable">
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>College 1</th>
+          <th>College 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Comparison rows will be added dynamically here -->
+      </tbody>
+    </table>
+  </div>
+
+  
+  <script>
+    const csvData = `Serial no.;College Name;Course Fees;Placement;User Reviews;Ranking
+#1;"IIT Madras - Indian Institute of Technology - [IITM], Chennai Chennai, Tamil Nadu | AICTE Approved B.Tech Computer Science Engineering";"₹ 2,09,550BE/B.Tech- 1st Year FeesCompare Fees";"₹ 21,48,000Average Package₹ 1,98,00,000Highest PackageCompare Placement";8.4 / 10 Based on 336 User ReviewsBest in Social Life;#3th/34 in India 2021
+#2;"IIMA - Indian Institute of Management, Ahmedabad Ahmedabad, Gujarat | UGC Approved PGPMCAT 2023 Cutoff : 99 Apply Now Download Brochure Add To Compare";"₹ 25,00,000MBA/PGDM- Total FeesCompare Fees";"₹ 34,36,000Average Package₹ 1,15,00,000Highest Package100% PlacementCompare Placement";9.1 / 10 Based on 51 User ReviewsBest in Placements;#2th/50 in India 2019+ 8 More
+;
+#3;"IIM Bangalore - Indian Institute of Management, Bangalore Bangalore, Karnataka | AICTE, UGC Approved PGPMCAT ";"₹ 24,50,000MBA/PGDM- Total FeesCompare Fees";"₹ 35,31,000Average Package₹ 1,15,00,000Highest Package100% PlacementCompare Placement";9.2 / 10 Based on 75 User ReviewsBest in Infrastructure;#1th/50 in India 2019+ 7 More
+;`;
+
+    // Parse CSV data
+    let colleges = [];
+    const rows = csvData.trim().split('\n');
+    rows.forEach(row => {
+      const columns = row.split(';');
+      colleges.push(columns);
+    });
+
+    // Populate select options
+    const collegeSelect1 = document.getElementById('college1');
+    const collegeSelect2 = document.getElementById('college2');
+
+    colleges.forEach((college, index) => {
+      // Skip header row
+      if (index !== 0) {
+        const name = college[1].replace(/^"|"$/g, ''); // Trim double quotes
+        const option1 = document.createElement('option');
+        option1.value = name;
+        option1.textContent = name;
+        const option2 = option1.cloneNode(true);
+        collegeSelect1.appendChild(option1);
+        collegeSelect2.appendChild(option2);
+      }
+    });
+
+    const compareButton = document.querySelector('.compare-button');
+    const comparisonResult = document.getElementById('comparisonResult');
+    const comparisonTableBody = document.querySelector('#comparisonTable tbody');
+
+    compareButton.addEventListener('click', function() {
+      const college1 = document.getElementById('college1').value;
+      const college2 = document.getElementById('college2').value;
+
+      if (college1 && college2 && college1 !== college2) {
+        // Clear previous comparison rows
+        comparisonTableBody.innerHTML = '';
+
+        // Add comparison rows dynamically
+        addComparisonRow('College Name', college1, college2);
+        addComparisonRow('Course Fees', college1, college2);
+        addComparisonRow('Placement', college1, college2);
+        addComparisonRow('User Reviews', college1, college2);
+        addComparisonRow('Ranking', college1, college2);
+
+        // Show the comparison result section
+        comparisonResult.style.display = 'block';
+      } else {
+        alert('Please select two different colleges for comparison.');
+      }
+    });
+
+    function addComparisonRow(label, college1, college2) {
+      const college1Data = getCollegeData(college1, label);
+      const college2Data = getCollegeData(college2, label);
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${label}</td>
+        <td>${college1Data}</td>
+        <td>${college2Data}</td>
+      `;
+      comparisonTableBody.appendChild(row);
+    }
+
+    function getCollegeData(collegeName, fieldLabel) {
+      const college = colleges.find(col => col[1].includes(collegeName));
+      if (college) {
+        switch (fieldLabel) {
+          case 'College Name':
+            return college[1];
+          case 'Course Fees':
+            return college[2];
+          case 'Placement':
+            return college[3];
+          case 'User Reviews':
+            return college[4];
+          case 'Ranking':
+            return college[5];
+          default:
+            return '';
+        }
+      } else {
+        console.log(`College "${collegeName}" not found.`);
+        return '';
+      }
+    }
+  </script>
+</body>
+</html>

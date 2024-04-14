@@ -1,0 +1,38 @@
+
+
+
+.white-background {
+  background-color: white !important;
+  color: #4CAF50 !important; /* Change the text color when background is white */
+}
+
+
+a{
+  color: black;
+}
+
+/* Add this CSS to a file named style.css */
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
+    animation: fadeInUp 0.5s ease forwards;
+    color: beige;
+    font-weight: 100;
+    background-color: #4CAF50;
+  }
+  
+  .card-body {
+    min-height: 200px; 
+    /* Adjust this value as needed */
+  }
+  

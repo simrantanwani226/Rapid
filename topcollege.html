@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>The Career valley</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style3.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Rapid
+  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    .card-body {
+      min-height: 200px; /* Adjust this value as needed */
+    }
+    .slide a {
+      color: white; /* Set default link color to white */
+    }
+    .slide.black-text a {
+      color: black; /* Set link color to black */
+    }
+    .slide a:hover {
+      text-decoration: none; /* Remove underline on hover */
+    }
+    .white-background {
+  background-color: white !important;
+  color: #4CAF50 !important; /* Change the text color when background is white */
+}
+  </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><img src="assets/img/cvlogo.png"> </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Container ======= -->
+  <div class="container">
+    <!-- Search bar -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Card Details -->
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <div class="card" onclick="toggleBackground(this)">
+          <div class="card-body">
+            <h5 class="card-title">Best Engineering College in India</h5>
+            <ul class="slide black-text" style="color: black;">
+              <li><a href="#">IIT Madras - Indian Institute of Technology</a></li>
+              <li><a href="#">IIT Delhi - Indian Institute of Technology</a></li>
+              <li><a href="#">IIT Bombay - Indian Institute of Technology</a></li>
+              <li><a href="#">IIT Kanpur - Indian Institute of Technology</a></li>
+              <li><a href="#">NIT Trichy - National Institute of Technology</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" onclick="toggleBackground(this)">
+          <div class="card-body">
+            <h5 class="card-title">Top MBA Colleges in India</h5>
+            <ul class="slide black-text" style="color: black;">
+              <li><a href="#">IIM Ahmedabad</a></li>
+              <li><a href="#">IIM Bangalore</a></li>
+              <li><a href="#">IIM Calcutta</a></li>
+              <li><a href="#">ISB Hyderabad</a></li>
+              <li><a href="#">FMS Delhi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" onclick="toggleBackground(this)">
+          <div class="card-body">
+            <h5 class="card-title">Best Colleges in Hyderabad</h5>
+            <ul class="slide black-text" style="color: black;">
+              <li><a href="#">Indian School of Business (ISB)</a></li>
+              <li><a href="#">International Institute of Information Technology (IIIT)</a></li>
+              <li><a href="#">National Institute of Fashion Technology (NIFT)</a></li>
+              <li><a href="#">University of Hyderabad (UoH)</a></li>
+              <li><a href="#">Jawaharlal Nehru Technological University (JNTUH)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-4">
+        <div class="card" onclick="toggleBackground(this)">
+          <div class="card-body">
+            <h5 class="card-title">Best Colleges in Bangalore</h5>
+            <ul class="slide black-text" style="color: black;">
+              <li><a href="#">Indian Institute of Science (IISc)</a></li>
+              <li><a href="#">Indian Institute of Management Bangalore (IIMB)</a></li>
+              <li><a href="#">International Institute of Information Technology Bangalore (IIITB)</a></li>
+              <li><a href="#">Christ University</a></li>
+              <li><a href="#">PES University</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" onclick="toggleBackground(this)">
+          <div class="card-body">
+            <h5 class="card-title">Best Colleges in Delhi</h5>
+            <ul class="slide black-text" style="color: black;">
+              <li><a href="#">University of Delhi (DU)</a></li>
+              <li><a href="#">Indian Institute of Technology Delhi (IITD)</a></li>
+              <li><a href="#">Jawaharlal Nehru University (JNU)</a></li>
+              <li><a href="#">All India Institute of Medical Sciences (AIIMS)</a></li>
+              <li><a href="#">National Institute of Fashion Technology (NIFT)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card" onclick="toggleBackground(this)">
+          <div class="card-body">
+            <h5 class="card-title">Best Law Colleges in India</h5>
+            <ul class="slide black-text" style="color: black;">
+              <li><a href="#">National Law School of India University (NLSIU), Bangalore</a></li>
+              <li><a href="#">National Academy of Legal Studies and Research (NALSAR), Hyderabad</a></li>
+              <li><a href="#">National Law University (NLU), Delhi</a></li>
+              <li><a href="#">Symbiosis Law School, Pune</a></li>
+              <li><a href="#">National Law University (NLU), Jodhpur</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Container -->
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function toggleBackground(card) {
+      card.classList.toggle('white-background');
+    }
+  </script>
+</body>
+
+</html>

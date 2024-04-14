@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>The Career valley</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!--<link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Rapid
+  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+  <link href="assets/css/style2.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><img src="assets/img/cvlogo.png"> </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#footer">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Main Section ======= -->
+  <section id="main" class="main">
+    <div class="container">
+      <h2>Colleges Rank-wise</h2>
+
+      <table id="csvTable" class="table table-striped">
+        <thead>
+          <!-- Table headers will be populated dynamically -->
+        </thead>
+        <tbody>
+          <!-- Table body will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </section><!-- End Main Section -->
+
+  <script>
+    window.onload = function () {
+      // Function to fetch and parse CSV file
+      function fetchCSV() {
+        // Sample CSV data (replace with your data)
+        const csvData = `Serial no.;College Name;Course Fees;Placement;User Reviews;Ranking
+#1;"IIT Madras - Indian Institute of Technology - [IITM], Chennai Chennai, Tamil Nadu |AICTE ApprovedB.Tech Computer Science Engineering";"₹ 2,09,550BE/B.Tech- 1st Year FeesCompare Fees";"₹ 21,48,000Average Package₹ 1,98,00,000Highest PackageCompare Placement";8.4 / 10 Based on 336 User ReviewsBest in Social Life;#3th/34 in India 2021
+#2;"IIMA - Indian Institute of Management, Ahmedabad Ahmedabad, Gujarat |UGC ApprovedPGPMCAT 2023 Cutoff : 99Apply NowDownload BrochureAdd To Compare";"₹ 25,00,000MBA/PGDM- Total FeesCompare Fees";"₹ 34,36,000Average Package₹ 1,15,00,000Highest Package100% PlacementCompare Placement";9.1 / 10 Based on 51 User ReviewsBest in Placements;#2th/50 in India 2019+ 8 More
+;
+#3;"IIM Bangalore - Indian Institute of Management, Bangalore Bangalore, Karnataka |AICTE, UGC ApprovedPGPMCAT ";"₹ 24,50,000MBA/PGDM- Total FeesCompare Fees";"₹ 35,31,000Average Package₹ 1,15,00,000Highest Package100% PlacementCompare Placement";9.2 / 10 Based on 75 User ReviewsBest in Infrastructure;#1th/50 in India 2019+ 7 More
+;`
+
+        // Store CSV data in local storage
+        localStorage.setItem('csvData', csvData);
+
+        // Parse CSV data and populate table
+        parseCSV(csvData);
+      }
+
+      // Function to parse CSV data and populate table
+      function parseCSV(csv) {
+        const rows = csv.split('\n');
+        const headers = rows[0].split(';');
+        const tbody = document.querySelector('#csvTable tbody');
+        const thead = document.querySelector('#csvTable thead');
+
+        // Populate table headers
+        let headerHTML = '';
+        headers.forEach(header => {
+          headerHTML += `<th>${header}</th>`;
+        });
+        thead.innerHTML = `<tr>${headerHTML}</tr>`;
+
+        // Populate table body
+        let bodyHTML = '';
+        for (let i = 1; i < rows.length; i++) {
+          const row = rows[i].split(';');
+          bodyHTML += '<tr>';
+          row.forEach(cell => {
+            bodyHTML += `<td>${cell}</td>`;
+          });
+          bodyHTML += '</tr>';
+        }
+        tbody.innerHTML = bodyHTML;
+      }
+
+      // Call fetchCSV function
+      fetchCSV();
+    };
+  </script>
+
+</body>
+
+</html>
